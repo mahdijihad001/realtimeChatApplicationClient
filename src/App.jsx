@@ -4,6 +4,7 @@ import ChatPage from './page/ChatPage'
 import SignInPage from './page/SignInPage'
 import SignUpPage from './page/SignUpPage'
 import { useAuthStore } from './store/useAuthStore'
+import { Toaster } from 'react-hot-toast'
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
         <Route path='/signin' element={!authUser ? <SignInPage /> : <Navigate to={"/"} />} />
         <Route path='/signup' element={!authUser ? <SignUpPage /> : <Navigate to={"/"} />} />
       </Routes>
+      <Toaster />
     </div>
   )
 }
