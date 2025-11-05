@@ -12,7 +12,7 @@ const SignUpPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
+    signUp(formData);
   }
 
   console.log("SignUpPage");
@@ -90,6 +90,25 @@ const SignUpPage = () => {
                   <Link to="/signin" className="auth-link">
                     Already have an account? Login
                   </Link>
+                </div>
+              </div>
+            </div>
+            {/* Form Illastraction Right Side */}
+            <div className='hidden md:w-1/2 md:flex items-center justify-center p-6 bg-gradient-to-bl from-slate-800/20 to-transparent'>
+              <div>
+                <img
+                  src="/signup.png"
+                  alt="People using mobile devices"
+                  className="w-full h-auto object-contain"
+                />
+                <div className="mt-6 text-center">
+                  <h3 className="text-xl font-medium text-cyan-400">Start Your Journey Today</h3>
+
+                  <div className="mt-4 flex justify-center gap-4">
+                    <span className="auth-badge">Free</span>
+                    <span className="auth-badge">Easy Setup</span>
+                    <span className="auth-badge">Private</span>
+                  </div>
                 </div>
               </div>
             </div>
